@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+
+     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--
+         这个是做一个扫描，会扫描com.mmall包下面的一些注解，这样我们就很方便在类中进行注入
+    -->
+    <context:component-scan base-package="com.imooc.o2o" annotation-config="true"/>
+
+    <!--
+         aop是apo的一个配置
+     -->
+    <!--<context:annotation-config/>-->
+    <!--<aop:aspectj-autoproxy/>-->
+
+    <!--
+         这个是指将当前的spring配置文件进行分离，我们分离出来一个applicationContext-datasource.xml
+     -->
+    <!--<import resource="applicationContext-datasource.xml"/>-->
+
+
+</beans>
