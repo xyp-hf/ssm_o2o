@@ -48,9 +48,14 @@ public class ShopCategory {
 	private Date lastEditTime;
 	
 	/**
-	 * 上级id
+	 * 上级ID(实体类)
 	 */
-	private Long parentId;
+//	private Long parentId;
+	
+	/**
+	 * 上级实体类 Id
+	 */
+	private ShopCategory parent;
 
 	public Long getShopCategoryId() {
 		return shopCategoryId;
@@ -108,13 +113,19 @@ public class ShopCategory {
 		this.lastEditTime = lastEditTime;
 	}
 
-	public Long getParentId() {
-		return parentId;
-	}
+//	public Long getParentId() {
+//		return parentId;
+//	}
+//
+//	public void setParentId(Long parentId) {
+//		this.parentId = parentId;
+//	}
 
-	public void setParentId(Long parentId) {
-		this.parentId = parentId;
-	}
-
-
+	public ShopCategory getParent() {
+        return parent;
+    }
+ 
+    public void setParent(ShopCategory parent) {
+        this.parent = parent;
+    }
 }
